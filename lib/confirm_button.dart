@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/animation_bottom_navigation.dart';
 import 'package:flutter_animated_button/widgets/confirm_animation.dart';
 
 class ConfirmButton extends StatefulWidget {
@@ -17,6 +18,7 @@ class _ConfirmButtonState extends State<ConfirmButton> {
       body: Center(
         child: AnimatedConfirmButton(
           onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_)=> BottomBarNavigationPatternExample()));
             print("animated button pressed");
           },
           animationDuration: const Duration(milliseconds: 2000),
